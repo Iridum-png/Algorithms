@@ -1,6 +1,3 @@
-import random
-
-
 def bubble_sort(arr: list) -> list :
     for _ in range(len(arr)):
         for j in range(len(arr) - 1):
@@ -130,6 +127,7 @@ def bucket_sort(arr: list) -> list :
     return arr
 
 def radix_sort(arr: list) -> list :
+
     max_val = max(arr)
     for i in range(len(str(max_val))):
         buckets = [[] for _ in range(10)]
@@ -137,3 +135,6 @@ def radix_sort(arr: list) -> list :
             buckets[int(arr[j] % (10 ** (i + 1)) / (10 ** i))].append(arr[j])
         arr[:] = [item for sublist in buckets for item in sublist]
     return arr
+
+
+
