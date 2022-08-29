@@ -135,6 +135,3 @@ def radix_sort(arr: list) -> list :
             buckets[int(arr[j] % (10 ** (i + 1)) / (10 ** i))].append(arr[j])
         arr[:] = [item for sublist in buckets for item in sublist]
     return arr
-
-
-
