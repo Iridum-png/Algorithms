@@ -78,7 +78,7 @@ def fibbonacci_search(arr: list, target) -> int :
     n = len(arr)
     f = fib(n)
     while f < n:
-        i = int(f - (fib(f) - 1))
+        i = f - (fib(f) - 1)
         if arr[i] == target:
             return i
         elif arr[i] < target:
